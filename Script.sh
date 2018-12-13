@@ -15,13 +15,13 @@ mkdir $Create_Folder
 
 # دوال لطباعة المدخلات
 echo "  آكتب اسم البرنامج بالانجليزي واضغط انتر "
-read -p " Type in an English name and press Enter : " appName
+read -p " Type in an English name and press Enter :" appName
 echo "آكتب اسم البرنامج بالانجليزي واضغط انتر "
-read -p " Type in an English name and press Enter : " nameEn
+read -p " Type in an English name and press Enter :" nameEn
 echo "آكتب اسم البرنامج بالعربي واضغط انتر "
-read -p " Type in an Arabic name and press Enter : " nameAr
+read -p " Type in an Arabic name and press Enter :" nameAr
 echo "آكتب بندل للبرنامج واضغط انتر"
-read -p " Type in an Arabic name and press Enter : " Bundle
+read -p " Type in an Arabic name and press Enter :" Bundle
 
 
 cd $IPAIN
@@ -85,7 +85,6 @@ APPLICATION=$(ls "$IPAIN/Payload/")
 
 # تغير اسم البرنامج داخل ملف الانفو بلست
 /usr/libexec/PlistBuddy -c "Set :CFBundleDisplayName $nameEn " $IPAIN/Payload/$APPLICATION/$infoplist
-/usr/libexec/PlistBuddy -c "Set :CFBundleExecutable $nameEn " $IPAIN/Payload/$APPLICATION/$infoplist
 /usr/libexec/PlistBuddy -c "Set :CFBundleName $nameEn " $IPAIN/Payload/$APPLICATION/$infoplist
 
 # تغير بندل البرنامج داخل ملف الانفو بلست
